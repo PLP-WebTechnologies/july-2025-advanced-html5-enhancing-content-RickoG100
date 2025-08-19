@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Form Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+    header, footer {
+      background: #007bff;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 6px;
+    }
+    main {
+      background: white;
+      padding: 20px;
+      border-radius: 6px;
+      margin-top: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    form {
+      margin-top: 20px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+      text-align: left;
+      padding: 8px;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+    }
+    legend {
+      font-weight: bold;
+      color: #007bff;
+    }
+    img, video {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Enhanced HTML5 Form</h1>
+    <p>Example of semantic HTML, tables, lists, media, and validation</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About This Form</h2>
+      <p>This page demonstrates:</p>
+      <ul>
+        <li>Well-structured semantic HTML5</li>
+        <li>Tables for structured data</li>
+        <li>Media elements (image & video)</li>
+        <li>A full form with accessibility & validation features</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Sample Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Duration</th>
+            <th>Mode</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Web Development</td>
+            <td>3 Months</td>
+            <td>Online</td>
+          </tr>
+          <tr>
+            <td>Data Analysis</td>
+            <td>6 Months</td>
+            <td>Hybrid</td>
+          </tr>
+          <tr>
+            <td>Graphic Design</td>
+            <td>2 Months</td>
+            <td>Offline</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Media Examples</h2>
+      <img src="https://via.placeholder.com/600x200.png?text=Sample+Image" alt="Sample placeholder image">
+      <video controls width="600" poster="https://via.placeholder.com/600x200.png?text=Video+Preview">
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </section>
+
+    <section>
+      <h2>Registration Form</h2>
+      <form action="#" method="post" autocomplete="on">
+        
+        <fieldset>
+          <legend>Personal Details</legend>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Ineah Omondi" required>
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="ineah@example.com" required autocomplete="email">
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="+254700000000" pattern="[+0-9]{10,15}" required>
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Setup</legend>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Ineah_omondi" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="********" minlength="8" required>
+
+          <label for="confirm">Confirm Password:</label>
+          <input type="password" id="confirm" name="confirm" placeholder="********" minlength="8" required readonly onfocus="this.removeAttribute('readonly');">
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="">-- Select --</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="nonbinary">Non-binary</option>
+            <option value="prefer-not">Prefer not to say</option>
+          </select>
+
+          <label>
+            <input type="checkbox" name="newsletter" checked>
+            Subscribe to our newsletter
+          </label>
+
+          <label for="bio">Short Bio:</label>
+          <textarea id="bio" name="bio" rows="3" placeholder="Tell us about yourself..."></textarea>
+        </fieldset>
+
+        <button type="submit">Submit Form</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Enhanced Form Example. All rights reserved.</p>
+  </footer>
+</body>
+</html>
